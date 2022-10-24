@@ -15,16 +15,16 @@ $ npm install
 
 ## Running the app
 
+This app uses mongodb to store data. When running tests we are using an [in-memory mongodb](https://nodkz.github.io/mongodb-memory-server/docs/guides/known-issues) instance. 
+
+Also uses Docker for container.
+Use the docker-compose command to run the application and database:
+
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+$ docker-compose up app mongo
 ```
+
+Alternatively, you can run just the database container or even install mongodb on your computer to run locally. Be sure to update the MONGODB_URL environment variable.
 
 ## Test
 
